@@ -11,13 +11,13 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
       url: '/',
       templateUrl: '/app/recommend/recommend.template.html',
       controller: 'RecommendController',
-      controllerAs: 'recommendCtrl'
+      controllerAs: 'RecommendController'
     })
     .state("article", {
       url: '/article/:articleId',
       templateUrl: '/app/article/article.html',
-      controller: 'articleCtrl',
-      controllerAs: 'articleCtrl'
+      controller: 'ArticleController',
+      controllerAs: 'ArticleController'
     });
 
   $urlRouterProvider.otherwise('/');

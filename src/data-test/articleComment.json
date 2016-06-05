@@ -10,7 +10,7 @@
 				"user_id": "user-1",
 				"user_href": "user_url-1",
 				"nickname": "叫我小T",
-				"head": "img/head.png"
+				"head": "/assets/images/head.png"
 			},
 			"has_child": false,
 			"parent": "0"
@@ -23,7 +23,7 @@
 				"user_id": "user-2",
 				"user_href": "user_url-2",
 				"nickname": "叫我小T",
-				"head": "img/head.png"
+				"head": "/assets/images/head.png"
 			},
 			"has_child": true,
 			"parent": "0"
@@ -36,7 +36,7 @@
 				"user_id": "user-3",
 				"user_href": "user_url-3",
 				"nickname": "叫我小T",
-				"head": "img/head.png"
+				"head": "/assets/images/head.png"
 			},
 			"has_child": false,
 			"parent": "comment-0002"
