@@ -1,7 +1,7 @@
 # 前端说明文档
 
 > 本文档为 `everyone-java-blog` 前端部分说明文档，供内部开发人员阅读。
-> 
+>
 > 更新日志见：[CHANGELOG.md](https://github.com/xiaolongzuo/everyone-java-blog/blob/master/blog-front/README.md)
 
 ## 目录（index）
@@ -21,43 +21,29 @@
 
 ## 文档结构（Contents）
 
-* dist/                         【**提供给后端的静态页面目录**】
-    - css/                      【样式】
-    - img/                      【图片资源】
-    - js/                       【脚本文件】
-    - lib/                      【第三方库】
+* .tmp/                         【临时文件】
+* bower_components/             【Bower 依赖】
+* coverage/                     【代码覆盖率报告】
+* e2e/                          【端对端测试】
+* gulp/                         【gulp task】
+* node_modules/                 【node 依赖】
+* src/                          【源文件】
+    - app/                      【预编译后的 CSS 文件，没啥卵用】
+    - assets/                   【资源文件】
+    - data-test/                【测试数据】
     - index.html                【首页】
-    - article.html              【文章页】
-    - list.html                 【没有榜单那三条的列表页，暂时没啥用】
-
-
------------------------------------------------------------------
-
-
-**以下目录结构后端请忽略**
-
-* src/                          【后端请忽略】【前端源文件】
-    - css/                      【预编译后的 CSS 文件，没啥卵用】
-    - img/                      【压缩后的图片，无需手动修改】
-    - img-original/             【未压缩的图片，新增/删改图片需要放入此目录】
-    - js/                       【脚本文件】
-    - less/                     【 LESS 样式文件，新增/删改样式在此目录进行】【样式现在较乱，有待重构】
-        + article.less
-        + color.less
-        + comment.less
-        + index.less
-        + main.less
-        + media-query.less
-        + navbar.less
-    - lib/                      【第三方库文件】
-    - index.html                【首页】
-    - article.html              【文章页】
-    - list.html                 【没有榜单那三条的列表页，暂时没啥用】
+* .bowerrc                      【Bower 配置文件】
+* .editorconfig                 【编辑器统一配置文件】
+* .eslintrc                     【ESLint 规则】
+* .gitignore                    【gitignore 文件】
+* .yo-rc.json                   【yeoman 配置文件】
 * bower.json                    【Bower 配置文件】
 * gulpfile.js                   【Gulp 配置文件】
+* karma.conf.js                 【Karma 配置文件】
 * package.json                  【npm 配置文件】
 * README.md                     【项目说明】
 * CHANGELOG.md                  【更新日志】
+* LICENSE
 
 
 -----------------------------------------------------------------
@@ -110,7 +96,7 @@
 -----------------------------------------------------------------
 
 
-## 前端开发参与说明（Develop）【后端请忽略】
+## 前端开发参与说明（Develop）
 
 *开发过程中使用的包依赖管理工具 `Bower` 和自动化构建工具 `Gulp` 依赖于 `NodeJS` 。*
 
@@ -120,7 +106,7 @@
 本项目前端部分使用 `Bower` 进行外部的包和依赖的管理。
 
 > `Bower` 官方网站：[http://bower.io/](http://bower.io/)
-> 
+>
 > `Bower` 使用教程：[Bower——前端开发包管理工具](http://www.tuicool.com/articles/v2a2yq)
 
 安装完成后，在命令行中进入项目目录，执行 `bower install --save-dev` ，下载相关资源。
@@ -136,14 +122,21 @@
 
 本项目自动构建的内容包括：
 
-* 创建本地服务器： [http://localhost:8004/](http://localhost:8004/)
-* 将项目相关第三方库整合在 `src/lib` 目录下；
-* 监听项目文件修改（html/less/js/img），文件修改后，浏览器自动重载资源；
-* 保存 `LESS` 文件后，自动执行预编译生成 `CSS` 文件到 `src/css` 目录；
-* 压缩 `img-original` 中的原始图片，存放到 `src/img` 目录下；
-* 打包项目生产内容到 `dist` 目录，供后端人员使用。
+* 创建本地服务器： [http://localhost:3000/](http://localhost:3000/)
+* 监听项目文件修改（src 文件夹），文件修改后，浏览器自动重载资源；
+* 自动注入 bower_components 文件夹和 src 文件夹下的 css 和 js 文件；
+* 保存 `LESS` 文件后，自动执行预编译生成 `CSS` 文件到 `.tmp/serve/app/index.css` ；
+* 打包项目生产内容到 `dist` 目录。
 
-前端人员开始开发前，在命令行中进入项目目录，执行 `gulp` ，即可开始执行上述构建工作。
+克隆本项目后，需执行 `npm install && bower install` 命令安装依赖。
+安装完成后，在命令行中进入项目目录，执行 `gulp serve` ，即可开始执行上述构建工作。
 
-*在 Git 上提交时，不需要提交 `bower_components` 、 `node_modules` 目录。*
+
+### 常用 Gulp Task
+
+* `gulp serve` : 启动服务器。
+* `gulp build` : 生成 APP，存储在 dist 文件夹。
+* `gulp inject` : 文件注入，自动添加 bower_components 和 src 中的源文件。
+* `gulp test` : 使用 Karma 进行单元测试。
+* `gulp protractor ` : 使用 Protractor 进行端对端测试。
 
