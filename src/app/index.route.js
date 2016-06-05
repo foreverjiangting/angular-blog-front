@@ -15,7 +15,7 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
     })
     .state("article", {
       url: '/article/:articleId',
-      templateUrl: '../templates/article.html',
+      templateUrl: '/app/article/article.html',
       controller: 'articleCtrl',
       controllerAs: 'articleCtrl'
     });

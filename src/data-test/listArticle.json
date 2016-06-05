@@ -2,7 +2,7 @@
 	{
 		"id": "test-id-1",
 		"href": "#/article/id004",
-		"img": "img/pic-1.png",
+		"img": "assets/images/pic-1.png",
 		"datetime": "2016-05-13T21:47:39+08:00",
 		"timetext": "1天之前",
 		"title": "测试标题测试标题测试标题测试标题测试标题",
@@ -19,7 +19,7 @@
 	}, {
 		"id": "test-id-2",
 		"href": "#/article/id005",
-		"img": "img/pic-2.png",
+		"img": "assets/images/pic-2.png",
 		"datetime": "2016-05-13T21:47:39+08:00",
 		"timetext": "2天之前",
 		"title": "测试标题测试标题测试标题测试标题测试标题",
@@ -36,7 +36,7 @@
 	}, {
 		"id": "test-id-1",
 		"href": "#/article/id006",
-		"img": "img/pic-1.png",
+		"img": "assets/images/pic-1.png",
 		"datetime": "2016-05-13T21:47:39+08:00",
 		"timetext": "1天之前",
 		"title": "测试标题测试标题测试标题测试标题测试标题",
@@ -53,7 +53,7 @@
 	}, {
 		"id": "test-id-2",
 		"href": "#/article/id007",
-		"img": "img/pic-2.png",
+		"img": "assets/images/pic-2.png",
 		"datetime": "2016-05-13T21:47:39+08:00",
 		"timetext": "2天之前",
 		"title": "测试标题测试标题测试标题测试标题测试标题",
@@ -70,7 +70,7 @@
 	}, {
 		"id": "test-id-1",
 		"href": "#/article/id008",
-		"img": "img/pic-1.png",
+		"img": "assets/images/pic-1.png",
 		"datetime": "2016-05-13T21:47:39+08:00",
 		"timetext": "1天之前",
 		"title": "测试标题测试标题测试标题测试标题测试标题",
@@ -87,7 +87,7 @@
 	}, {
 		"id": "test-id-2",
 		"href": "#/article/id009",
-		"img": "img/pic-2.png",
+		"img": "assets/images/pic-2.png",
 		"datetime": "2016-05-13T21:47:39+08:00",
 		"timetext": "2天之前",
 		"title": "测试标题测试标题测试标题测试标题测试标题",

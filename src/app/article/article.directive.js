@@ -4,7 +4,7 @@ export function ListArticleDirective(Recommend) {
   let directive = {
     restrict: 'E',
     replace: 'true',
-    templateUrl: '/templates/list-article.html',
+    templateUrl: '/app/article/list-article.html',
     link: function (scope) {
       Recommend.get_list('article').then(function (result) {
         scope.list_items = result;
@@ -23,7 +23,7 @@ export function ArticleContentDirective(Article) {
   let directive = {
     restrict: 'E',
     replace: 'true',
-    templateUrl: '/templates/article-content.html',
+    templateUrl: '/app/article/article-content.html',
     link: function (scope) {
       Article.get_content().then(function (result) {
         scope.article_data = result;
@@ -43,7 +43,7 @@ export function ArticleSupportDirective(Article) {
   let directive = {
     restrict: 'E',
     replace: 'true',
-    templateUrl: '/templates/article-support.html',
+    templateUrl: '/app/article/article-support.html',
     link: function (scope) {
       Article.get_support_data().then(function (result) {
         scope.support_data = result;
@@ -62,7 +62,7 @@ export function ArticleLikeDirective(Article) {
   let directive = {
     restrict: 'E',
     replace: 'true',
-    templateUrl: '/templates/article-like.html',
+    templateUrl: '/app/article/article-like.html',
     link: function (scope) {
       Article.get_like_data().then(function (result) {
         scope.like_data = result;
@@ -81,7 +81,7 @@ export function ArticleCommentDirective(Article) {
   let directive = {
     restrict: 'E',
     replace: 'true',
-    templateUrl: '/templates/article-comment.html',
+    templateUrl: '/app/article/article-comment.html',
     link: function (scope) {
       Article.get_comment().then(function (result) {
         scope.comment_data = result;
@@ -94,22 +94,3 @@ export function ArticleCommentDirective(Article) {
 
   return directive;
 }
-
-
-
-
-
-
-
-
-// .directive('childComment', function () {
-// 	return {
-// 		restrict: 'E',
-// 		replace: 'true',
-// 		templateUrl: '../templates/article-comment-child.html',
-// 		link: function (scope, iElement, iAttrs) {
-// 			scope.children = scope.$parent.comments;
-
-// 		}
-// 	};
-// })

@@ -4,7 +4,7 @@ export function LeftAsideDirective() {
   let directive = {
     restrict: 'E',
     replace: 'true',
-    templateUrl: '/templates/left-aside.html',
+    templateUrl: '/app/recommend/left-aside.html',
     link: function (scope) {
       scope.img_url = "background-image: url('../assets/images/bg.jpg')";
       scope.aside_title = "大家的博客";

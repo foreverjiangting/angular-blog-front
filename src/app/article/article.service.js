@@ -1,6 +1,3 @@
-/**
- * Created by llissery on 2016/6/5.
- */
 export class ArticleService {
   constructor ($q, $http) {
     'ngInject';
